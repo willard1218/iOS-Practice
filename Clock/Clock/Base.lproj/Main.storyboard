@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clock View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDf-En-Vbw">
+                                <items>
+                                    <navigationItem title="Title" id="eIA-ie-opX">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dBl-jI-wrA">
+                                            <connections>
+                                                <action selector="editButtonDidTap:" destination="BYZ-38-t0r" id="2CP-1C-sPa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MaL-q1-93o">
+                                            <connections>
+                                                <action selector="addButtonDidTap:" destination="BYZ-38-t0r" id="TUZ-hr-fJw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-vM-4EB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BDf-En-Vbw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="2ss-QL-0kD"/>
+                            <constraint firstItem="e9T-vM-4EB" firstAttribute="leading" secondItem="BDf-En-Vbw" secondAttribute="leading" id="Ekh-Wz-ICg"/>
+                            <constraint firstItem="BDf-En-Vbw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NKI-9X-0MU"/>
+                            <constraint firstItem="e9T-vM-4EB" firstAttribute="top" secondItem="BDf-En-Vbw" secondAttribute="bottom" id="WBe-84-9Ep"/>
+                            <constraint firstItem="BDf-En-Vbw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WW4-5g-N8b"/>
+                            <constraint firstItem="e9T-vM-4EB" firstAttribute="width" secondItem="BDf-En-Vbw" secondAttribute="width" id="cJP-MU-EEG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e9T-vM-4EB" secondAttribute="bottom" constant="56" id="eQW-iP-vJU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="e9T-vM-4EB" id="tfl-C9-ibJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
