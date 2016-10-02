@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9DEE631DA0C65B00A6259A /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */; };
+		5C9DEE681DA0D5A600A6259A /* SelectLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */; };
 		5CECA78A1D9FE6AE007BBA18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7891D9FE6AE007BBA18 /* main.m */; };
 		5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA78C1D9FE6AE007BBA18 /* AppDelegate.m */; };
 		5CECA7931D9FE6AE007BBA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7911D9FE6AE007BBA18 /* Main.storyboard */; };
@@ -14,9 +16,9 @@
 		5CECA7981D9FE6AE007BBA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7971D9FE6AE007BBA18 /* Assets.xcassets */; };
 		5CECA79B1D9FE6AE007BBA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7991D9FE6AE007BBA18 /* LaunchScreen.storyboard */; };
 		5CECA7A61D9FE6AE007BBA18 /* ClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7A51D9FE6AE007BBA18 /* ClockUITests.m */; };
-		5CECA7B21D9FE704007BBA18 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7B11D9FE704007BBA18 /* ClockViewController.m */; };
-		5CECA7B61D9FEA0F007BBA18 /* ClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7B41D9FEA0F007BBA18 /* ClockTableViewCell.m */; };
-		5CECA7B71D9FEA0F007BBA18 /* ClockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7B51D9FEA0F007BBA18 /* ClockTableViewCell.xib */; };
+		5CECA7B21D9FE704007BBA18 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7B11D9FE704007BBA18 /* AlarmViewController.m */; };
+		5CECA7B61D9FEA0F007BBA18 /* AlarmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7B41D9FEA0F007BBA18 /* AlarmTableViewCell.m */; };
+		5CECA7B71D9FEA0F007BBA18 /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7B51D9FEA0F007BBA18 /* AlarmTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C9DEE611DA0C65B00A6259A /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
+		5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
+		5C9DEE661DA0D5A600A6259A /* SelectLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLabelViewController.h; sourceTree = "<group>"; };
+		5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLabelViewController.m; sourceTree = "<group>"; };
 		5CECA7851D9FE6AE007BBA18 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECA7891D9FE6AE007BBA18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CECA78B1D9FE6AE007BBA18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,11 +48,11 @@
 		5CECA7A11D9FE6AE007BBA18 /* ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECA7A51D9FE6AE007BBA18 /* ClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockUITests.m; sourceTree = "<group>"; };
 		5CECA7A71D9FE6AE007BBA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CECA7B01D9FE704007BBA18 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
-		5CECA7B11D9FE704007BBA18 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
-		5CECA7B31D9FEA0F007BBA18 /* ClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewCell.h; sourceTree = "<group>"; };
-		5CECA7B41D9FEA0F007BBA18 /* ClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewCell.m; sourceTree = "<group>"; };
-		5CECA7B51D9FEA0F007BBA18 /* ClockTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockTableViewCell.xib; sourceTree = "<group>"; };
+		5CECA7B01D9FE704007BBA18 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		5CECA7B11D9FE704007BBA18 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		5CECA7B31D9FEA0F007BBA18 /* AlarmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewCell.h; sourceTree = "<group>"; };
+		5CECA7B41D9FEA0F007BBA18 /* AlarmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewCell.m; sourceTree = "<group>"; };
+		5CECA7B51D9FEA0F007BBA18 /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C9DEE651DA0D2DD00A6259A /* AddAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				5C9DEE611DA0C65B00A6259A /* AddAlarmViewController.h */,
+				5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */,
+				5C9DEE661DA0D5A600A6259A /* SelectLabelViewController.h */,
+				5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */,
+			);
+			name = AddAlarm;
+			sourceTree = "<group>";
+		};
 		5CECA77C1D9FE6AE007BBA18 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +107,7 @@
 			children = (
 				5CECA78B1D9FE6AE007BBA18 /* AppDelegate.h */,
 				5CECA78C1D9FE6AE007BBA18 /* AppDelegate.m */,
-				5CECA7B81D9FEA2A007BBA18 /* Clock */,
+				5CECA7B81D9FEA2A007BBA18 /* Alarm */,
 				5CECA7911D9FE6AE007BBA18 /* Main.storyboard */,
 				5CECA7971D9FE6AE007BBA18 /* Assets.xcassets */,
 				5CECA7991D9FE6AE007BBA18 /* LaunchScreen.storyboard */,
@@ -118,16 +135,17 @@
 			path = ClockUITests;
 			sourceTree = "<group>";
 		};
-		5CECA7B81D9FEA2A007BBA18 /* Clock */ = {
+		5CECA7B81D9FEA2A007BBA18 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				5CECA7B01D9FE704007BBA18 /* ClockViewController.h */,
-				5CECA7B11D9FE704007BBA18 /* ClockViewController.m */,
-				5CECA7B31D9FEA0F007BBA18 /* ClockTableViewCell.h */,
-				5CECA7B41D9FEA0F007BBA18 /* ClockTableViewCell.m */,
-				5CECA7B51D9FEA0F007BBA18 /* ClockTableViewCell.xib */,
+				5CECA7B01D9FE704007BBA18 /* AlarmViewController.h */,
+				5CECA7B11D9FE704007BBA18 /* AlarmViewController.m */,
+				5CECA7B31D9FEA0F007BBA18 /* AlarmTableViewCell.h */,
+				5CECA7B41D9FEA0F007BBA18 /* AlarmTableViewCell.m */,
+				5CECA7B51D9FEA0F007BBA18 /* AlarmTableViewCell.xib */,
+				5C9DEE651DA0D2DD00A6259A /* AddAlarm */,
 			);
-			name = Clock;
+			name = Alarm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +233,7 @@
 			files = (
 				5CECA79B1D9FE6AE007BBA18 /* LaunchScreen.storyboard in Resources */,
 				5CECA7981D9FE6AE007BBA18 /* Assets.xcassets in Resources */,
-				5CECA7B71D9FEA0F007BBA18 /* ClockTableViewCell.xib in Resources */,
+				5CECA7B71D9FEA0F007BBA18 /* AlarmTableViewCell.xib in Resources */,
 				5CECA7931D9FE6AE007BBA18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,9 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CECA7B61D9FEA0F007BBA18 /* ClockTableViewCell.m in Sources */,
+				5C9DEE681DA0D5A600A6259A /* SelectLabelViewController.m in Sources */,
+				5CECA7B61D9FEA0F007BBA18 /* AlarmTableViewCell.m in Sources */,
+				5C9DEE631DA0C65B00A6259A /* AddAlarmViewController.m in Sources */,
 				5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */,
-				5CECA7B21D9FE704007BBA18 /* ClockViewController.m in Sources */,
+				5CECA7B21D9FE704007BBA18 /* AlarmViewController.m in Sources */,
 				5CECA7961D9FE6AE007BBA18 /* Clock.xcdatamodeld in Sources */,
 				5CECA78A1D9FE6AE007BBA18 /* main.m in Sources */,
 			);
@@ -435,6 +455,7 @@
 				5CECA7AC1D9FE6AE007BBA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CECA7AD1D9FE6AE007BBA18 /* Build configuration list for PBXNativeTarget "ClockUITests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +464,7 @@
 				5CECA7AF1D9FE6AE007BBA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,5 +1,5 @@
 //
-//  ClockTableViewCell.h
+//  ClockViewController.h
 //  Clock
 //
 //  Created by willard on 2016/10/1.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClockTableViewCell : UITableViewCell
+@interface AlarmViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end

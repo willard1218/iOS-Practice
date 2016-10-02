@@ -6,13 +6,14 @@
 //  Copyright © 2016年 willard. All rights reserved.
 //
 
-#import "ClockTableViewCell.h"
+#import "AlarmTableViewCell.h"
 
-@implementation ClockTableViewCell
+@implementation AlarmTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    _timeLabel.text = @"16:46";
+    _tagLabel.text = @"Alarm";
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
