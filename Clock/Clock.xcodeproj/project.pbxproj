@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		5C9DEE631DA0C65B00A6259A /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */; };
 		5C9DEE681DA0D5A600A6259A /* SelectLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */; };
+		5C9DEE6B1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE6A1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m */; };
+		5C9DEE6F1DA1183800A6259A /* SelectRepeatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE6E1DA1183800A6259A /* SelectRepeatTableViewController.m */; };
+		5C9DEE721DA1366B00A6259A /* SelectSoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DEE711DA1366B00A6259A /* SelectSoundTableViewController.m */; };
+		5C9DEE751DA1380600A6259A /* ppap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE741DA1380600A6259A /* ppap.mp3 */; };
+		5C9DEE781DA1395D00A6259A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9DEE771DA1395D00A6259A /* AVFoundation.framework */; };
+		5C9DEE7A1DA13E4E00A6259A /* super_ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE791DA13E4E00A6259A /* super_ringtone.mp3 */; };
+		5C9DEE7C1DA13EF300A6259A /* love_me_like_you_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE7B1DA13EF300A6259A /* love_me_like_you_do.mp3 */; };
+		5C9DEE7E1DA13F1200A6259A /* super_mario_bros.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE7D1DA13F1200A6259A /* super_mario_bros.mp3 */; };
+		5C9DEE801DA13FCA00A6259A /* frozen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE7F1DA13FCA00A6259A /* frozen.mp3 */; };
 		5CECA78A1D9FE6AE007BBA18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7891D9FE6AE007BBA18 /* main.m */; };
 		5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA78C1D9FE6AE007BBA18 /* AppDelegate.m */; };
 		5CECA7931D9FE6AE007BBA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7911D9FE6AE007BBA18 /* Main.storyboard */; };
@@ -36,6 +45,18 @@
 		5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
 		5C9DEE661DA0D5A600A6259A /* SelectLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLabelViewController.h; sourceTree = "<group>"; };
 		5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLabelViewController.m; sourceTree = "<group>"; };
+		5C9DEE691DA0E0ED00A6259A /* UIColor+ADKHexPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ADKHexPresentation.h"; sourceTree = "<group>"; };
+		5C9DEE6A1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ADKHexPresentation.m"; sourceTree = "<group>"; };
+		5C9DEE6D1DA1183800A6259A /* SelectRepeatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectRepeatTableViewController.h; sourceTree = "<group>"; };
+		5C9DEE6E1DA1183800A6259A /* SelectRepeatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectRepeatTableViewController.m; sourceTree = "<group>"; };
+		5C9DEE701DA1366B00A6259A /* SelectSoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSoundTableViewController.h; sourceTree = "<group>"; };
+		5C9DEE711DA1366B00A6259A /* SelectSoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSoundTableViewController.m; sourceTree = "<group>"; };
+		5C9DEE741DA1380600A6259A /* ppap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ppap.mp3; sourceTree = "<group>"; };
+		5C9DEE771DA1395D00A6259A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5C9DEE791DA13E4E00A6259A /* super_ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = super_ringtone.mp3; sourceTree = "<group>"; };
+		5C9DEE7B1DA13EF300A6259A /* love_me_like_you_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = love_me_like_you_do.mp3; sourceTree = "<group>"; };
+		5C9DEE7D1DA13F1200A6259A /* super_mario_bros.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = super_mario_bros.mp3; sourceTree = "<group>"; };
+		5C9DEE7F1DA13FCA00A6259A /* frozen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frozen.mp3; sourceTree = "<group>"; };
 		5CECA7851D9FE6AE007BBA18 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECA7891D9FE6AE007BBA18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CECA78B1D9FE6AE007BBA18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9DEE781DA1395D00A6259A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +98,46 @@
 		5C9DEE651DA0D2DD00A6259A /* AddAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				5C9DEE731DA137F700A6259A /* Tones */,
 				5C9DEE611DA0C65B00A6259A /* AddAlarmViewController.h */,
 				5C9DEE621DA0C65B00A6259A /* AddAlarmViewController.m */,
+				5C9DEE6D1DA1183800A6259A /* SelectRepeatTableViewController.h */,
+				5C9DEE6E1DA1183800A6259A /* SelectRepeatTableViewController.m */,
 				5C9DEE661DA0D5A600A6259A /* SelectLabelViewController.h */,
 				5C9DEE671DA0D5A600A6259A /* SelectLabelViewController.m */,
+				5C9DEE701DA1366B00A6259A /* SelectSoundTableViewController.h */,
+				5C9DEE711DA1366B00A6259A /* SelectSoundTableViewController.m */,
 			);
 			name = AddAlarm;
+			sourceTree = "<group>";
+		};
+		5C9DEE6C1DA0E20200A6259A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5C9DEE691DA0E0ED00A6259A /* UIColor+ADKHexPresentation.h */,
+				5C9DEE6A1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		5C9DEE731DA137F700A6259A /* Tones */ = {
+			isa = PBXGroup;
+			children = (
+				5C9DEE7D1DA13F1200A6259A /* super_mario_bros.mp3 */,
+				5C9DEE7B1DA13EF300A6259A /* love_me_like_you_do.mp3 */,
+				5C9DEE791DA13E4E00A6259A /* super_ringtone.mp3 */,
+				5C9DEE741DA1380600A6259A /* ppap.mp3 */,
+				5C9DEE7F1DA13FCA00A6259A /* frozen.mp3 */,
+			);
+			name = Tones;
+			sourceTree = "<group>";
+		};
+		5C9DEE761DA1395D00A6259A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C9DEE771DA1395D00A6259A /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5CECA77C1D9FE6AE007BBA18 = {
@@ -90,6 +146,7 @@
 				5CECA7871D9FE6AE007BBA18 /* Clock */,
 				5CECA7A41D9FE6AE007BBA18 /* ClockUITests */,
 				5CECA7861D9FE6AE007BBA18 /* Products */,
+				5C9DEE761DA1395D00A6259A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +164,7 @@
 			children = (
 				5CECA78B1D9FE6AE007BBA18 /* AppDelegate.h */,
 				5CECA78C1D9FE6AE007BBA18 /* AppDelegate.m */,
+				5C9DEE6C1DA0E20200A6259A /* Category */,
 				5CECA7B81D9FEA2A007BBA18 /* Alarm */,
 				5CECA7911D9FE6AE007BBA18 /* Main.storyboard */,
 				5CECA7971D9FE6AE007BBA18 /* Assets.xcassets */,
@@ -231,8 +289,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9DEE7C1DA13EF300A6259A /* love_me_like_you_do.mp3 in Resources */,
+				5C9DEE801DA13FCA00A6259A /* frozen.mp3 in Resources */,
+				5C9DEE7A1DA13E4E00A6259A /* super_ringtone.mp3 in Resources */,
 				5CECA79B1D9FE6AE007BBA18 /* LaunchScreen.storyboard in Resources */,
+				5C9DEE751DA1380600A6259A /* ppap.mp3 in Resources */,
 				5CECA7981D9FE6AE007BBA18 /* Assets.xcassets in Resources */,
+				5C9DEE7E1DA13F1200A6259A /* super_mario_bros.mp3 in Resources */,
 				5CECA7B71D9FEA0F007BBA18 /* AlarmTableViewCell.xib in Resources */,
 				5CECA7931D9FE6AE007BBA18 /* Main.storyboard in Resources */,
 			);
@@ -252,10 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9DEE6B1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m in Sources */,
 				5C9DEE681DA0D5A600A6259A /* SelectLabelViewController.m in Sources */,
 				5CECA7B61D9FEA0F007BBA18 /* AlarmTableViewCell.m in Sources */,
 				5C9DEE631DA0C65B00A6259A /* AddAlarmViewController.m in Sources */,
+				5C9DEE721DA1366B00A6259A /* SelectSoundTableViewController.m in Sources */,
 				5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */,
+				5C9DEE6F1DA1183800A6259A /* SelectRepeatTableViewController.m in Sources */,
 				5CECA7B21D9FE704007BBA18 /* AlarmViewController.m in Sources */,
 				5CECA7961D9FE6AE007BBA18 /* Clock.xcdatamodeld in Sources */,
 				5CECA78A1D9FE6AE007BBA18 /* main.m in Sources */,

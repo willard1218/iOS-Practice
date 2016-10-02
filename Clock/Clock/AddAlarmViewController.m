@@ -8,6 +8,9 @@
 
 #import "AddAlarmViewController.h"
 #import "SelectLabelViewController.h"
+#import "SelectRepeatTableViewController.h"
+#import "SelectSoundTableViewController.h"
+
 typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     AddAlarmTableViewCellRowRepeat,
     AddAlarmTableViewCellRowLabel,
@@ -27,15 +30,20 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Add Alarm";
     _tableView.dataSource = self;
     _tableView.delegate = self;
     // Do any additional setup after loading the view.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)saveButtonDidTap:(UIBarButtonItem *)sender {
+    
 }
+
+- (IBAction)cancelButtonDidTap:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 4;
@@ -77,19 +85,26 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
 }
 
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%d",indexPath.row);
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
     switch (indexPath.row) {
         case AddAlarmTableViewCellRowRepeat:
-            break;
-        case AddAlarmTableViewCellRowLabel: {
-            SelectLabelViewController *vc = [[SelectLabelViewController alloc] init];
-            
-            [self presentViewController:vc animated:YES completion:nil];
+        {
+            SelectRepeatTableViewController *vc = [[SelectRepeatTableViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case AddAlarmTableViewCellRowSound:
+        case AddAlarmTableViewCellRowLabel: {
+            SelectLabelViewController *vc = [[SelectLabelViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
             break;
+        }
+        case AddAlarmTableViewCellRowSound: {
+            SelectSoundTableViewController *vc = [[SelectSoundTableViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }    break;
         case AddAlarmTableViewCellRowSnooze:
             break;
     }

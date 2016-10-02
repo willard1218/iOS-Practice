@@ -9,14 +9,22 @@
 #import "SelectLabelViewController.h"
 
 @interface SelectLabelViewController ()
-
+@property UITextField *textField;
 @end
 
 @implementation SelectLabelViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"Label";
+    self.view.backgroundColor = [UIColor whiteColor];
+    _textField = [[UITextField alloc] init];
+    _textField.text = @"Alarm";
+    _textField.frame = CGRectMake(10, 100, self.view.frame.size.width, 30);
+    _textField.backgroundColor = [UIColor grayColor];
+    _textField.returnKeyType = UIReturnKeyDone;
+    [_textField becomeFirstResponder];
+    [self.view addSubview:_textField];
 }
 
 - (void)didReceiveMemoryWarning {

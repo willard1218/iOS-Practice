@@ -8,6 +8,7 @@
 
 #import "AlarmViewController.h"
 #import "AlarmTableViewCell.h"
+#import "UIColor+ADKHexPresentation.h"
 @interface AlarmViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -18,15 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _tableView.dataSource = self;
     _tableView.delegate = self;
     self.title = @"Alarm";
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 5;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
@@ -39,8 +41,6 @@
     if (!cell)
     {
         cell = [[NSBundle mainBundle] loadNibNamed:@"AlarmTableViewCell" owner:self options:nil][0];
-
-        
     }
     return cell;
 }

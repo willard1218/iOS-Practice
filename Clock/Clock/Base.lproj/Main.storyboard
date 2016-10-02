@@ -84,8 +84,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N98-UM-cF0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="azf-ei-VAx"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ly6-G7-ATF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="azf-ei-VAx">
+                            <connections>
+                                <action selector="cancelButtonDidTap:" destination="FFl-mZ-OER" id="xhd-pW-m8h"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ly6-G7-ATF">
+                            <connections>
+                                <action selector="saveButtonDidTap:" destination="FFl-mZ-OER" id="yhq-A7-ais"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="GHG-ky-Oi9" id="ngA-xd-CkU"/>
@@ -115,4 +123,5 @@
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.58680474758148193" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
