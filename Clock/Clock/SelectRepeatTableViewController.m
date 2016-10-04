@@ -7,18 +7,18 @@
 //
 
 #import "SelectRepeatTableViewController.h"
+#import "Alarm+CoreDataClass.h"
 
 @interface SelectRepeatTableViewController ()
-@property NSArray<NSString *>*days;
 @end
 
 @implementation SelectRepeatTableViewController
-
+static  AlertRepeatDayOption repeatDayOptions;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _days = @[@"Sunday", @"Monday",@"Tuesday", @"Wednesday", @"Thursday", @"Friday" @"Saturday"];
-    
+    repeatDayOptions =  AlertRepeatDayOptionMonday | AlertRepeatDayOptionFriday;
+        
     self.tableView.frame = CGRectMake(0, 10, self.view.frame.size.width, self.view.frame.size.height - 10);
     
     // Uncomment the following line to preserve selection between presentations.
@@ -33,28 +33,42 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_days count];
+    return [DAYS count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *reuseIdentifier = @"SelectRepeatTableViewCell";
-    UITableViewCell *cell;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
     
     if ( !cell ) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier] ;
     }
     
-    // cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     
+    if (OptionsHasValue(repeatDayOptions, [DAY_OPTIONS[indexPath.row] intValue])) {
+      cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Every %@", _days[indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Every %@", DAYS[indexPath.row]];
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AlertRepeatDayOption selectedOption = [DAY_OPTIONS[indexPath.row] intValue];
+
+    if (OptionsHasValue(repeatDayOptions,selectedOption)) {
+        repeatDayOptions &=  ~selectedOption;
+    }
+    else {
+        repeatDayOptions |= [DAY_OPTIONS[indexPath.row] intValue];
+    }
     
+    [self.tableView reloadData];
 }
 
 /*
