@@ -37,8 +37,9 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     _tableView.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _datePicker.date = _alarm.time;
+    
     if (!_isAddMode) {
+        _datePicker.date = _alarm.time;
         self.title = @"Edit Alarm";
         return;
     }
