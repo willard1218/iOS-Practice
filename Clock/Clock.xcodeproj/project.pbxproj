@@ -19,7 +19,9 @@
 		5C9DEE7E1DA13F1200A6259A /* super_mario_bros.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE7D1DA13F1200A6259A /* super_mario_bros.mp3 */; };
 		5C9DEE801DA13FCA00A6259A /* frozen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5C9DEE7F1DA13FCA00A6259A /* frozen.mp3 */; };
 		5CBAA4DA1DA3D4C900E2B9A9 /* Alarm+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAA4D71DA3D4C900E2B9A9 /* Alarm+CoreDataClass.m */; };
-		5CBAA4DB1DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAA4D91DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.m */; };
+		5CBAA4E01DA4726800E2B9A9 /* Alarms.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CBAA4DF1DA4726800E2B9A9 /* Alarms.json */; };
+		5CBAA4E81DA4A09B00E2B9A9 /* Alarm+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAA4E71DA4A09B00E2B9A9 /* Alarm+CoreDataProperties.m */; };
+		5CBAA4EB1DA4A11600E2B9A9 /* NSManagedObject+operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAA4EA1DA4A11600E2B9A9 /* NSManagedObject+operation.m */; };
 		5CECA78A1D9FE6AE007BBA18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA7891D9FE6AE007BBA18 /* main.m */; };
 		5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CECA78C1D9FE6AE007BBA18 /* AppDelegate.m */; };
 		5CECA7931D9FE6AE007BBA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CECA7911D9FE6AE007BBA18 /* Main.storyboard */; };
@@ -61,8 +63,12 @@
 		5C9DEE7F1DA13FCA00A6259A /* frozen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frozen.mp3; sourceTree = "<group>"; };
 		5CBAA4D61DA3D4C900E2B9A9 /* Alarm+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Alarm+CoreDataClass.h"; path = "CoreData/Alarm+CoreDataClass.h"; sourceTree = "<group>"; };
 		5CBAA4D71DA3D4C900E2B9A9 /* Alarm+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Alarm+CoreDataClass.m"; path = "CoreData/Alarm+CoreDataClass.m"; sourceTree = "<group>"; };
-		5CBAA4D81DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Alarm+CoreDataProperties.h"; path = "CoreData/Alarm+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5CBAA4D91DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Alarm+CoreDataProperties.m"; path = "CoreData/Alarm+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5CBAA4DF1DA4726800E2B9A9 /* Alarms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Alarms.json; sourceTree = "<group>"; };
+		5CBAA4E11DA4789A00E2B9A9 /* Clock 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Clock 2.xcdatamodel"; sourceTree = "<group>"; };
+		5CBAA4E61DA4A09500E2B9A9 /* Alarm+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alarm+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5CBAA4E71DA4A09B00E2B9A9 /* Alarm+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Alarm+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5CBAA4E91DA4A11600E2B9A9 /* NSManagedObject+operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+operation.h"; path = "../NSManagedObject+operation.h"; sourceTree = "<group>"; };
+		5CBAA4EA1DA4A11600E2B9A9 /* NSManagedObject+operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+operation.m"; path = "../NSManagedObject+operation.m"; sourceTree = "<group>"; };
 		5CECA7851D9FE6AE007BBA18 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECA7891D9FE6AE007BBA18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CECA78B1D9FE6AE007BBA18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -149,10 +155,10 @@
 		5CBAA4DC1DA3D4D300E2B9A9 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5CBAA4E61DA4A09500E2B9A9 /* Alarm+CoreDataProperties.h */,
+				5CBAA4E71DA4A09B00E2B9A9 /* Alarm+CoreDataProperties.m */,
 				5CBAA4D61DA3D4C900E2B9A9 /* Alarm+CoreDataClass.h */,
 				5CBAA4D71DA3D4C900E2B9A9 /* Alarm+CoreDataClass.m */,
-				5CBAA4D81DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.h */,
-				5CBAA4D91DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -189,6 +195,9 @@
 				5CECA7991D9FE6AE007BBA18 /* LaunchScreen.storyboard */,
 				5CECA79C1D9FE6AE007BBA18 /* Info.plist */,
 				5CECA7941D9FE6AE007BBA18 /* Clock.xcdatamodeld */,
+				5CBAA4DF1DA4726800E2B9A9 /* Alarms.json */,
+				5CBAA4E91DA4A11600E2B9A9 /* NSManagedObject+operation.h */,
+				5CBAA4EA1DA4A11600E2B9A9 /* NSManagedObject+operation.m */,
 				5CECA7881D9FE6AE007BBA18 /* Supporting Files */,
 			);
 			path = Clock;
@@ -312,6 +321,7 @@
 				5C9DEE7A1DA13E4E00A6259A /* super_ringtone.mp3 in Resources */,
 				5CECA79B1D9FE6AE007BBA18 /* LaunchScreen.storyboard in Resources */,
 				5C9DEE751DA1380600A6259A /* ppap.mp3 in Resources */,
+				5CBAA4E01DA4726800E2B9A9 /* Alarms.json in Resources */,
 				5CECA7981D9FE6AE007BBA18 /* Assets.xcassets in Resources */,
 				5C9DEE7E1DA13F1200A6259A /* super_mario_bros.mp3 in Resources */,
 				5CECA7B71D9FEA0F007BBA18 /* AlarmTableViewCell.xib in Resources */,
@@ -336,9 +346,10 @@
 				5C9DEE6B1DA0E0ED00A6259A /* UIColor+ADKHexPresentation.m in Sources */,
 				5C9DEE681DA0D5A600A6259A /* SelectLabelViewController.m in Sources */,
 				5CECA7B61D9FEA0F007BBA18 /* AlarmTableViewCell.m in Sources */,
+				5CBAA4E81DA4A09B00E2B9A9 /* Alarm+CoreDataProperties.m in Sources */,
 				5C9DEE631DA0C65B00A6259A /* AddAlarmViewController.m in Sources */,
 				5C9DEE721DA1366B00A6259A /* SelectSoundTableViewController.m in Sources */,
-				5CBAA4DB1DA3D4C900E2B9A9 /* Alarm+CoreDataProperties.m in Sources */,
+				5CBAA4EB1DA4A11600E2B9A9 /* NSManagedObject+operation.m in Sources */,
 				5CBAA4DA1DA3D4C900E2B9A9 /* Alarm+CoreDataClass.m in Sources */,
 				5CECA78D1D9FE6AE007BBA18 /* AppDelegate.m in Sources */,
 				5C9DEE6F1DA1183800A6259A /* SelectRepeatTableViewController.m in Sources */,
@@ -558,9 +569,10 @@
 		5CECA7941D9FE6AE007BBA18 /* Clock.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				5CBAA4E11DA4789A00E2B9A9 /* Clock 2.xcdatamodel */,
 				5CECA7951D9FE6AE007BBA18 /* Clock.xcdatamodel */,
 			);
-			currentVersion = 5CECA7951D9FE6AE007BBA18 /* Clock.xcdatamodel */;
+			currentVersion = 5CBAA4E11DA4789A00E2B9A9 /* Clock 2.xcdatamodel */;
 			path = Clock.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

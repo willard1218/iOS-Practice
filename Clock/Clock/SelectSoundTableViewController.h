@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Alarm+CoreDataClass.h"
 @interface SelectSoundTableViewController : UITableViewController
-
+@property (weak, nonatomic) Alarm *alarm;
 @end

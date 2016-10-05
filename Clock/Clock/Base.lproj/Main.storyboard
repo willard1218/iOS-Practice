@@ -32,14 +32,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zqR-wW-tKa">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="7ee-PB-JwW"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="7ee-PB-JwW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lHr-Wk-PE7">
                             <connections>
-                                <segue destination="FFl-mZ-OER" kind="show" id="oSp-kH-8oS"/>
+                                <segue destination="FFl-mZ-OER" kind="show" identifier="pushToAdd" id="Rjb-X9-ZNU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="7ee-PB-JwW" id="s4W-DJ-nT7"/>
                         <outlet property="tableView" destination="e9T-vM-4EB" id="tfl-C9-ibJ"/>
                     </connections>
                 </viewController>

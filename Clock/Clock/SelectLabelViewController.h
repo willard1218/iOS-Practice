@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SelectLabelViewController : UIViewController
-
+#import "Alarm+CoreDataClass.h"
+@interface SelectLabelViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) Alarm *alarm;
 @end

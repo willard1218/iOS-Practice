@@ -11,6 +11,9 @@
 #import "SelectRepeatTableViewController.h"
 #import "SelectSoundTableViewController.h"
 
+#import "AppDelegate.h"
+#import "NSManagedObject+operation.h"
+
 typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     AddAlarmTableViewCellRowRepeat,
     AddAlarmTableViewCellRowLabel,
@@ -30,13 +33,40 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Add Alarm";
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    // Do any additional setup after loading the view.
-}
-- (IBAction)saveButtonDidTap:(UIBarButtonItem *)sender {
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    _datePicker.date = _alarm.time;
+    if (!_isAddMode) {
+        self.title = @"Edit Alarm";
+        return;
+    }
+    
+    self.title = @"Add Alarm";
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    _alarm = [NSEntityDescription
+                    insertNewObjectForEntityForName:NSStringFromClass(Alarm.class)
+                    inManagedObjectContext:app.persistentContainer.viewContext];
+    _alarm.time = [[NSDate alloc] init];
+    _alarm.label = @"Alarm";
+    _alarm.repeatDayOptions = AlertRepeatDayOptionNone;
+    _alarm.soundID = 1;
+    _alarm.isSnooze = YES;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_tableView reloadData];
+}
+
+- (IBAction)saveButtonDidTap:(UIBarButtonItem *)sender {
+    _alarm.time = _datePicker.date;
+    _alarm.createdAt = [[NSDate alloc] init];
+    _alarm.isEnable = YES;
+    [_alarm save];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)cancelButtonDidTap:(UIBarButtonItem *)sender {
@@ -62,62 +92,77 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     switch (indexPath.row) {
         case AddAlarmTableViewCellRowRepeat:
             cell.textLabel.text = @"Repeat";
-            cell.detailTextLabel.text = @"Never";
+            cell.detailTextLabel.text = [_alarm getRepeatOptionsText];
             break;
         case AddAlarmTableViewCellRowLabel:
             cell.textLabel.text = @"Label";
-            cell.detailTextLabel.text = @"Alarm";
+            cell.detailTextLabel.text = _alarm.label;
             break;
         case AddAlarmTableViewCellRowSound:
+        {
             cell.textLabel.text = @"Sound";
-            cell.detailTextLabel.text = @"Night";
+            NSString *musicText = MUSICS[_alarm.soundID];
+            cell.detailTextLabel.text = [self capitalizedTitleString:musicText];
             break;
+        }
         case AddAlarmTableViewCellRowSnooze:
-            
+        {
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.textLabel.text = @"Snooze";
             UISwitch *switchview = [[UISwitch alloc] initWithFrame:CGRectZero];
-            switchview.on = YES;
-            //            [switchview addTarget:self action:@selector(chick_Switch:) forControlEvents:UIControlEventValueChanged];
+            switchview.on = _alarm.isSnooze;
+            [switchview addTarget:self
+                           action:@selector(switchStateChanged:)
+                 forControlEvents:UIControlEventValueChanged];
+            
             cell.accessoryView = switchview;
             break;
+        }
     }
+    
     return cell;
 }
 
+- (void)switchStateChanged:(UISwitch *) uiSwitch {
+    _alarm.isSnooze = uiSwitch.on ;
+}
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (NSString *)capitalizedTitleString:(NSString *)title {
+    NSMutableArray *texts = [NSMutableArray arrayWithArray:
+                             [title componentsSeparatedByString:@"_"]];
+    for (int i = 0 ; i < texts.count; i++ ) {
+        texts[i] = [texts[i] capitalizedString];
+    }
+    
+    return [texts componentsJoinedByString:@" "];;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     switch (indexPath.row) {
         case AddAlarmTableViewCellRowRepeat:
         {
             SelectRepeatTableViewController *vc = [[SelectRepeatTableViewController alloc] init];
+            vc.alarm = _alarm;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case AddAlarmTableViewCellRowLabel: {
             SelectLabelViewController *vc = [[SelectLabelViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-            
+            vc.alarm = _alarm;
             break;
         }
         case AddAlarmTableViewCellRowSound: {
             SelectSoundTableViewController *vc = [[SelectSoundTableViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-            
+            vc.alarm = _alarm;
         }    break;
         case AddAlarmTableViewCellRowSnooze:
             break;
     }
 
 }
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
 
 @end

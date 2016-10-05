@@ -39,9 +39,18 @@ typedef NS_OPTIONS(NSUInteger, AlertRepeatDayOption) {
                         @"Sunday" \
                ]
 
+#define MUSICS  @[ @"super_mario_bros", \
+@"love_me_like_you_do", \
+@"super_ringtone",  \
+@"ppap", \
+@"frozen" ]
+
+
 #define OptionsHasValue(options, value) (((options) & (value)) == (value))
 @interface Alarm : NSManagedObject
-
+- (void)initWithDictionary:(NSDictionary *)dict;
+- (NSString *) getRepeatOptionsText;
++ (NSDateFormatter *)getDateFormatter;
 @end
 
 NS_ASSUME_NONNULL_END

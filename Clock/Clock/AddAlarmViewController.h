@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Alarm+CoreDataClass.h"
 @interface AddAlarmViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
-
+@property (weak, nonatomic) Alarm *alarm;
+@property (nonatomic) BOOL isAddMode;
 @end

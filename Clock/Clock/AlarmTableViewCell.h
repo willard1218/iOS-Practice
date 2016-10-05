@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Alarm;
 @interface AlarmTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tagLabel;
 @property (strong, nonatomic) IBOutlet UISwitch *activeSwitch;
-
+@property (weak) Alarm *alarm;
+- (void)initWithAlarm:(Alarm *)alarm;
 @end

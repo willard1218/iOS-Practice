@@ -2,7 +2,7 @@
 //  Alarm+CoreDataProperties.h
 //  Clock
 //
-//  Created by willard on 2016/10/4.
+//  Created by willard on 2016/10/5.
 //  Copyright © 2016年 willard. All rights reserved.
 //
 
@@ -15,10 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Alarm *> *)fetchRequest;
 
-@property (nonatomic) int16_t repeatDayOptions;
-@property (nullable, nonatomic, copy) NSString *label;
-@property (nonatomic) int16_t soundID;
+@property (nullable, nonatomic, copy) NSDate *createdAt;
 @property (nonatomic) BOOL isSnooze;
+@property (nullable, nonatomic, copy) NSString *label;
+@property (nonatomic) int16_t repeatDayOptions;
+@property (nonatomic) int16_t soundID;
+@property (nullable, nonatomic, copy) NSDate *time;
+@property (nonatomic) BOOL isEnable;
+@property (nullable, nonatomic, copy) NSDate *updatedAt;
 
 @end
 
