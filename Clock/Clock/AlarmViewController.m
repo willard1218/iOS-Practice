@@ -40,7 +40,6 @@
                         insertNewObjectForEntityForName:NSStringFromClass(Alarm.class)
                         inManagedObjectContext:app.persistentContainer.viewContext];
         [alarm initWithDictionary:alarmJson];
-        NSLog(@"%@",alarm);
     }
     
     [app saveContext];
@@ -70,8 +69,14 @@
 - (NSMutableArray *)fetchAllAlarms {
     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSError *error = nil;
+    NSFetchRequest<Alarm *> *fetchRequest = [Alarm fetchRequest];
     NSArray *alarms =
-    [app.persistentContainer.viewContext executeFetchRequest:[Alarm fetchRequest] error:&error];
+    [app.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    alarms = [alarms sortedArrayUsingComparator:^NSComparisonResult(Alarm *obj1 , Alarm *obj2) {
+        NSString *alarmTime1 = [[Alarm getDateFormatter] stringFromDate:obj1.time];
+        NSString *alarmTime2 = [[Alarm getDateFormatter] stringFromDate:obj2.time];
+        return ([alarmTime1 compare:alarmTime2]);
+    }];
 
     return [NSMutableArray arrayWithArray:alarms];
 }

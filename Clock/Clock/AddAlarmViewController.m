@@ -49,12 +49,11 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     _alarm = [NSEntityDescription
                     insertNewObjectForEntityForName:NSStringFromClass(Alarm.class)
                     inManagedObjectContext:app.persistentContainer.viewContext];
-    _alarm.time = [[NSDate alloc] init];
+    
     _alarm.label = @"Alarm";
     _alarm.repeatDayOptions = AlertRepeatDayOptionNone;
-    _alarm.soundID = 1;
+    _alarm.soundID = 0;
     _alarm.isSnooze = YES;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -72,6 +71,11 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
 
 - (IBAction)cancelButtonDidTap:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    if (!_isAddMode) {
+        return;
+    }
+    
+    [_alarm delete];
 }
 
 
