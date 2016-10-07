@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end
 
@@ -41,9 +42,12 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     if (!_isAddMode) {
         _datePicker.date = _alarm.time;
         self.title = @"Edit Alarm";
+        [_deleteButton addTarget:self action:@selector(deleteAlarmAndPopViewController) forControlEvents:UIControlEventTouchUpInside];
+        _deleteButton.superview.hidden = NO;
         return;
     }
     
+    _deleteButton.superview.hidden = YES;
     self.title = @"Add Alarm";
     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     _alarm = [NSEntityDescription
@@ -78,6 +82,10 @@ typedef NS_ENUM(NSInteger, AddAlarmTableViewCellRow) {
     [_alarm delete];
 }
 
+- (void)deleteAlarmAndPopViewController {
+    [self.navigationController popViewControllerAnimated:YES];
+    [_alarm delete];
+}
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

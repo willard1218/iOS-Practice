@@ -72,16 +72,37 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-qH-3A3">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iod-ae-McV" userLabel="Delete Alarm">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="NmL-wI-F77"/>
+                                        </constraints>
+                                        <state key="normal" title="Delete Alarm">
+                                            <color key="titleColor" red="1" green="0.12935732462681515" blue="0.22041703649150957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iod-ae-McV" firstAttribute="centerX" secondItem="Ycg-qH-3A3" secondAttribute="centerX" id="il6-ik-Xwv"/>
+                                    <constraint firstItem="iod-ae-McV" firstAttribute="centerY" secondItem="Ycg-qH-3A3" secondAttribute="centerY" id="jsX-PQ-GTt"/>
+                                    <constraint firstAttribute="height" constant="47" id="nqd-Jl-kIm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GHG-ky-Oi9" firstAttribute="top" secondItem="dk2-7V-dnE" secondAttribute="bottom" constant="2" id="4P2-ZC-RgR"/>
                             <constraint firstAttribute="trailing" secondItem="GHG-ky-Oi9" secondAttribute="trailing" id="DQ2-kq-WfC"/>
+                            <constraint firstItem="if7-d8-0jP" firstAttribute="top" secondItem="Ycg-qH-3A3" secondAttribute="bottom" constant="15" id="PTL-lM-cXn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ycg-qH-3A3" secondAttribute="trailing" constant="-16" id="Qlb-tf-O6A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L3N-sO-PmU" secondAttribute="trailing" constant="-16" id="VlF-Ga-lsF"/>
                             <constraint firstItem="GHG-ky-Oi9" firstAttribute="leading" secondItem="S1y-V3-94i" secondAttribute="leading" id="bkk-QN-Z1N"/>
-                            <constraint firstItem="if7-d8-0jP" firstAttribute="top" secondItem="L3N-sO-PmU" secondAttribute="bottom" id="h1r-yi-dCb"/>
+                            <constraint firstItem="Ycg-qH-3A3" firstAttribute="top" secondItem="L3N-sO-PmU" secondAttribute="bottom" constant="8" id="cdl-Po-pyH"/>
                             <constraint firstItem="L3N-sO-PmU" firstAttribute="top" secondItem="GHG-ky-Oi9" secondAttribute="bottom" id="h6E-yr-Zeb"/>
                             <constraint firstItem="L3N-sO-PmU" firstAttribute="leading" secondItem="S1y-V3-94i" secondAttribute="leadingMargin" constant="-16" id="nJQ-qO-0fr"/>
+                            <constraint firstItem="Ycg-qH-3A3" firstAttribute="leading" secondItem="S1y-V3-94i" secondAttribute="leadingMargin" constant="-16" id="urs-3u-MWg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N98-UM-cF0">
@@ -98,6 +119,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="GHG-ky-Oi9" id="ngA-xd-CkU"/>
+                        <outlet property="deleteButton" destination="iod-ae-McV" id="YBg-dY-0DL"/>
                         <outlet property="tableView" destination="L3N-sO-PmU" id="zjM-DA-oEG"/>
                     </connections>
                 </viewController>
